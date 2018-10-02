@@ -1,0 +1,23 @@
+{
+  "name": "jest-date-serializer",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "yarn build && yarn jest -i",
+    "build": "yarn rollup src/index.js --file dist/index.js --format cjs"
+  },
+  "repository": "https://github.com/tobilen/jest-date-serializer.git",
+  "author": "Tobias Lengsholz <tobias.lengsholz@invision.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "./dist/index.js"
+    ]
+  },
+  "dependencies": {
+    "rollup": "^0.66.2"
+  }
+}
