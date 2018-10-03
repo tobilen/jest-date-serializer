@@ -1,4 +1,4 @@
-const test = input => input instanceof Date;
+const test = input => Object.prototype.toString.call(input) === '[object Date]';
 const print = d => {
   const dateWithoutOffset = new Date(
     d.getTime() - d.getTimezoneOffset() * 60000,
