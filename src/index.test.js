@@ -10,7 +10,7 @@ describe('jest-date-serializer', () => {
     const cestDate = new Date(
       utcDate.getTime() - 120 * 60000,
     );
-    expect(serializer.print(cestDate)).toBe(utcDate.toUTCString());
+    expect(serializer.print(cestDate)).toBe('Date { 2018-07-01T00:00:00.000Z }');
   });
 
   it('ignores DST', () => {
@@ -23,7 +23,7 @@ describe('jest-date-serializer', () => {
     const cestWinterDate = new Date(
       utcWinterDate.getTime() - 60 * 60000,
     );
-    expect(serializer.print(cestSummerDate)).toBe(utcSummerDate.toUTCString());
-    expect(serializer.print(cestWinterDate)).toBe(utcWinterDate.toUTCString());
+    expect(serializer.print(cestSummerDate)).toBe('Date { 2018-07-01T00:00:00.000Z }');
+    expect(serializer.print(cestWinterDate)).toBe('Date { 2018-01-01T00:00:00.000Z }');
   })
 });
