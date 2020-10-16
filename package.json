@@ -10,11 +10,10 @@
   "author": "Tobias Lengsholz <tobias.lengsholz@invision.de>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^26.4.2",
-    "rollup": "^2.28.1",
-    "set-value": "^2.0.1",
-    "kind-of": "^6.0.3"
-
+    "jest": "^26.5.3",
+    "kind-of": "^6.0.3",
+    "rollup": "^2.31.0",
+    "set-value": "^3.0.2"
   },
   "jest": {
     "snapshotSerializers": [
